@@ -17,6 +17,11 @@
             letter-spacing: 4.8px;
             margin-bottom: 11px;
             text-transform: uppercase;
+
+            @include breakpoint("xxs") {
+                font-size: 42px;
+                letter-spacing: 3px;
+            }
         }
 
         &__motto {

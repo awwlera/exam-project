@@ -43,6 +43,11 @@
         @include breakpoint("sm") {
             margin-bottom: 50px;
         }
+
+        @include breakpoint("xs") {
+            width: 100%;
+            margin: 0 auto 50px;
+        }
     }
 
     &__img-holder {
