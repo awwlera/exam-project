@@ -1,6 +1,33 @@
 .menu {
     padding: 32px 0 25px;
     background-color: $blue;
+    position: relative;
+
+    &.active {
+        .menu__nav {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .burger-menu {
+            span {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &::before {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &::after {
+                bottom: 43%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
 
     .flex {
         justify-content: space-between;
@@ -16,8 +43,41 @@
         }
     }
 
+    &__nav {
+
+        @include breakpoint('md') {
+            position:absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            width: 100%;
+            z-index: 5;
+            background-color: $blue;
+            // transform: translateX(100%);
+            transition: all ease-in-out 0.3s;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &__nav-list {
+
+        @include breakpoint('md') {
+            flex-direction: column;
+            padding: 50px 0;
+        }
+    }
+
     &__nav-item {
-        padding: 0 25px
+        padding: 0 25px;
+
+        @include breakpoint("lg") {
+            padding: 0 10px;
+        }
+
+        @include breakpoint('md') {
+            padding: 30px 0;
+        }
     }
 
     &__nav-link {
@@ -25,8 +85,70 @@
         font-size: 14px;
         text-transform: uppercase;
 
+        @include breakpoint("lg") {
+            font-size: 12px;
+        }
+
+        @include breakpoint('md') {
+            font-size: 16px;
+        }
+
         &:hover {
             color: $black-opacity;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+
+    .burger-menu {
+        display: none;
+
+        @include breakpoint('md') {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 30px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            z-index: 6;
+        }
+
+        &::before {
+            content: '';
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $white;
+            transition: all ease-in-out 0.3s;
+        }
+
+        &::after {
+            content: '';
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $white;
+            transition: all ease-in-out 0.3s;
+        }
+
+        span {
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $white;
             transition: all ease-in-out 0.3s;
         }
     }

@@ -15,6 +15,14 @@
         width: 60%;
         padding: 49px 25px 39px 62px;
 
+        @include breakpoint("lg") {
+            width: 50%;
+        }
+
+        @include breakpoint("md") {
+            width: 100%;
+        }
+
         &__title {
             margin-bottom: 8px;
         }
@@ -26,6 +34,14 @@
 
     &__img-holder {
         width: 40%;
+
+        @include breakpoint("lg") {
+            width: 50%;
+        }
+
+        @include breakpoint("md") {
+            width: 100%;
+        }
     }
 
     .icon-quote {

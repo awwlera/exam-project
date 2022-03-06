@@ -1,8 +1,17 @@
 .instruction {
     padding: 99px 0 116px;
 
+    @include breakpoint("md") {
+        padding: 60px 0 80px;
+    }
+
     &__item {
         width: calc(100%/3);
+
+        @include breakpoint("sm") {
+            width: 100%;
+            margin-bottom: 50px;
+        }
     }
 
     &__icon-holder {
@@ -14,6 +23,10 @@
 
     &__icon {
 
+        @include breakpoint("md") {
+            max-width: 80px;
+        }
+
         &:hover {
             transform: scale(1.2);
             transition: all ease-in-out 0.3s;
@@ -24,5 +37,13 @@
         font-family: aleo,sans-serif;
         font-size: 36px;
         text-align: center;
+
+        @include breakpoint("lg") {
+            font-size: 30px;
+        }
+
+        @include breakpoint("md") {
+            font-size: 24px;
+        }
     }
 }
