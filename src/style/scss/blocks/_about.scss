@@ -1,0 +1,41 @@
+.about {
+    padding: 118px 0 117px;
+
+    &__text-holder {
+        width: 50%;
+        padding-right: 55px;
+    }
+
+    &__img-holder {
+        width: 50%;
+        padding-left:  55px;
+    }
+
+    &__text p {
+        margin-bottom: 45px;
+    }
+
+    &__btn {
+        padding: 21px 40px 16px;
+    }
+
+    &__img-holder {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    &__img {
+        max-width: 350px;
+        align-self: flex-start;
+        margin-bottom: 10px;
+
+        &_lower {
+            align-self: flex-end;
+            margin-bottom: 0;
+        }
+    }
+    .section-title {
+        padding: 94px 0 50px;
+    }
+}

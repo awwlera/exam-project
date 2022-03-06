@@ -1,0 +1,33 @@
+.menu {
+    padding: 32px 0 25px;
+    background-color: $blue;
+
+    .flex {
+        justify-content: space-between;
+    }
+
+    .logo__link {
+        font-size: 24px;
+        letter-spacing: 2.4px;
+
+        &:hover {
+            color: $black-opacity;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+
+    &__nav-item {
+        padding: 0 25px
+    }
+
+    &__nav-link {
+        font-family: aleo,sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $black-opacity;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+}

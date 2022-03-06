@@ -1,0 +1,14 @@
+.book {
+    padding: 227px 0 99px;
+
+    .container {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &_spain {
+        .container {
+            justify-content: flex-end;
+        }
+    }
+}

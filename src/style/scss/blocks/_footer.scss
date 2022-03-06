@@ -1,0 +1,40 @@
+.footer {
+    padding: 122px 0 46px;
+
+    .container {
+        max-width: 196px;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .logo {
+        margin-bottom: 16px;
+
+        &__link {
+            font-size: 24px;
+            letter-spacing: 3.36px;
+            padding: 0 0 8px; 
+
+            &:hover {
+                color: $blue;
+                transition: all ease-in-out 0.3s;
+            }
+        }
+    }
+
+    &__social-list {
+        margin: 0 -10px;
+    }
+
+    &__social-link {
+        padding: 0 10px;
+
+        &:hover {
+            transform: scale(1.2);
+            color: $blue;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+}
