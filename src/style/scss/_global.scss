@@ -111,8 +111,8 @@ img {
         position: relative;
         border:  3px solid $white;
 
-        @include breakpoint("xs") {
-          width: 300px;  
+        @include breakpoint("sm") {
+            width: 300px;
         }
     }
 }
@@ -120,8 +120,7 @@ img {
 .card {
     max-width: 543px;
     width:100%;
-    background-color: $black-opacity;
-    opacity: 0.9;
+    background-color: rgba($color: #232323, $alpha: 0.9);
     padding: 49px 32px 50px;
 
     &__name {
